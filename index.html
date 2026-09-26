@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Required: makes phones render at real device width instead of zooming out -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 2: Mobile-First Responsive Profile Showcase</title>
 
+  <!-- Required: stylesheet lives in the css/ folder -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER: logo + navigation ===== -->
+  <header class="navbar">
+    <a href="#home" class="logo">Sean Wong</a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- ===== BIO / HERO: full-width intro ===== -->
+    <section class="bio-hero" id="home">
+      <p class="greeting">
+        <span>Hello</span>
+        <span lang="zh-Hant">你好</span>
+        <span lang="ja">こんにちは</span>
+      </p>
+
+      <div class="bio">
+        <h1>I'm Sean.</h1>
+        <p>
+          I'm a third-year Digital Enterprise Management student at the
+          University of Toronto Mississauga and a digital marketing intern at
+          Thule North America, where I work on email marketing, analytics, SEO
+          and Amazon content.
+        </p>
+        <p>
+          Before that, I spent a summer with Thule Group's brand communication
+          team in Malmö, Sweden, working on Asian markets. I work in English,
+          Mandarin, Cantonese and Japanese.
+        </p>
+        <p>Looking for a Summer 2027 internship in the Greater Toronto Area.</p>
+      </div>
+    </section>
+
+    <!-- ===== PROJECT CARDS ===== -->
+    <h2 class="section-title" id="projects">Projects</h2>
+
+    <section class="card-grid" aria-labelledby="projects">
+
+        <article class="card">
+            <p class="card-context">UTEHKSA, Marketing Associate</p>
+            <h3>Bilingual sponsor announcements</h3>
+            <p>
+              Wrote English and Cantonese Instagram captions announcing the
+              sponsors of VELOURIA, UTEHKSA's 2026 Tri-Campus Semi Formal.
+            </p>
+            <p class="card-skills">Social media, copywriting, bilingual content</p>
+          </article>
+
+      <article class="card">
+        <p class="card-context">CCT225 group project</p>
+        <h3>Information system for COSTI</h3>
+        <p>
+          Designed a management information system for COSTI with my group
+          and recommended Salesforce Nonprofit Cloud as the platform to
+          build it on.
+        </p>
+        <p class="card-skills">Systems analysis, requirements, CRM</p>
+      </article>
+
+      <article class="card">
+        <p class="card-context">CCT221 marketing plan</p>
+        <h3>Surveillance pricing at Instacart</h3>
+        <p>
+          Built a marketing plan around surveillance pricing, where prices
+          change based on a shopper's personal data, using Instacart as the
+          case study.
+        </p>
+        <p class="card-skills">Market research, marketing strategy</p>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- ===== FOOTER / CONTACT ===== -->
+  <footer class="site-footer" id="contact">
+    <h2>Contact</h2>
+    <!-- TODO: replace with your real email and LinkedIn URL -->
+    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    <p><a href="https://www.linkedin.com/in/your-profile">LinkedIn</a></p>
+    <p>&copy; 2026 Sean. Built for CCT360 Lab 2.</p>
+  </footer>
+
+</body>
+</html>

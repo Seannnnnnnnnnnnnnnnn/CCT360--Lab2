@@ -1,1 +1,167 @@
+/* CCT360 Lab 2 - mobile-first styles
+   Everything above the media query = mobile (< 768px).
+   The media query at the bottom = desktop (>= 768px). */
 
+   *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*padding and border count inside the width, so nothing overflows*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    line-height: 1.6;
+    color: midnightblue;
+    background-color: aliceblue;
+}
+
+/* ---------- Header ---------- */
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: midnightblue;
+    padding: 20px 24px;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: column; /*links stack vertically on mobile*/
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+ul{
+    list-style-type: none; /*cancels the bullets on ul*/
+}
+
+ul li a{    /*hierarchy; a inside li inside ul*/
+    text-decoration: none;
+    color: lightblue;
+}
+
+/* ---------- Main ---------- */
+.container{
+    /*centers the content and limits how wide it can get*/
+    margin: 0px auto;
+    max-width: 1000px;
+    padding: 40px 24px;
+}
+
+/* ---------- Bio / hero ---------- */
+.bio-hero{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    gap: 24px;
+}
+
+.greeting{
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: bold;
+    color: teal;
+    white-space: nowrap; /*keeps こんにちは on one line*/
+}
+
+.bio p{
+    margin-top: 12px;
+}
+
+/* ---------- Cards ---------- */
+.section-title{
+    margin: 48px 0px 16px;
+}
+
+.card-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    gap: 8px;
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 4px 4px lightsteelblue; /*x axis, y axis, colour*/
+    transition: 0.2s;
+}
+
+.card:hover{
+    transform: translate(-2px, -2px); /*card moves up-left...*/
+    box-shadow: 8px 8px teal;         /*...while the shadow grows, so it looks lifted*/
+}
+
+.card-context,
+.card-skills{
+    font-size: 14px;
+    color: dimgray;
+}
+
+/* ---------- Footer ---------- */
+.site-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background-color: midnightblue;
+    color: white;
+    padding: 32px 24px;
+}
+
+.site-footer a{
+    color: lightblue;
+}
+
+/* ---------- Desktop ---------- */
+@media(min-width:768px){
+    .navbar,
+    .site-footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links{
+        flex-direction: row;
+        gap: 24px;
+        margin-top: 0px;
+    }
+
+    .bio-hero{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .greeting{
+        flex-basis: 40%;
+        font-size: 64px;
+    }
+
+    .bio{
+        flex-basis: 60%;
+    }
+
+    .card-grid{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0px;
+    }
+
+    .card{
+        flex-basis: 30%;
+    }
+}
